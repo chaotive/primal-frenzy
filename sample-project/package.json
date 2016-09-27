@@ -1,7 +1,7 @@
 {
   "name": "sample-project",
   "version": "0.0.1",
-  "description": "Part of Chaotive Framework.",
+  "description": "Chaotive framework sample bootstrap project",
   "main": "target/sample.js",
   "devDependencies": {
     "chai": "~1.7.2",

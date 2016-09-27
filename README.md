@@ -7,6 +7,7 @@ It has been developed with Web and Mobile applications and videogames developmen
 - Graphics engines: Pixi.js
 - Game engines: Phaser / Three.js / BabylonJS
 - Programming languages: CoffeeScript / TypeScript
+- Unit test: Mocha & Chai
 - Project definition: Grunt
 - Packaging: npm
 - Application bundle: PhoneGap / Cordova

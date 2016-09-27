@@ -1,12 +1,9 @@
-/**
- * Created by leo on 12-11-2015.
- */
 console.log("Starting test suite...");
 
 function init() {
     try {
         console.log("Attempting start...");
-        loadWhenCSAvailable(testMocha);
+        CHAOTIVE.UTIL.loadWhenCSAvailable(testMocha);
         console.log("... application started! :)");
     } catch(err) {
         console.log("Still loading: " + err.message);

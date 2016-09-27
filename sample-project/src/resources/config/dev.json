@@ -1,14 +1,5 @@
 {
-  "map": {
-    "cell": {
-      "width": 3,
-      "height": 3,
-      "depth": 1
-    },
-    "rooms": [
-      {"r":0, "c": 0, "rows": 10, "cols": 5},
-      {"r":12, "c": 12, "rows": 5, "cols": 10},
-      {"r":25, "c": -12, "rows": 10, "cols": 10}
-    ]
+  "welcome": {
+    "message": "Welcome to dev version of Sample Project"
   }
 }

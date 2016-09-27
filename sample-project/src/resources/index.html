@@ -12,12 +12,10 @@
 <script src="lib/pixi-3.0.11.js"></script>
 <script src="lib/babylon.2.4.js"></script>
 
-<script src="js/lib/RandomDungeonGenerator-2.js"></script>
-
 <script src="js/namespaces.js"></script>
 
 <script src="js/chaotive.js"></script>
-<script src="js/dec.js"></script>
+<script src="js/sample.js"></script>
 
 <script src="js/main.js"></script>
 
@@ -30,26 +28,21 @@
 <div id="main">
     <div id="game">
         <canvas id="game-stage"></canvas>
-        <canvas id="game-hud"></canvas>
     </div>
 </div>
 
 <div id="controls"><h1>Controls</h1>
     <div id="controls-player" class="left2"><h2>Player</h2>
         <div>Move:
-            <button onclick="DEC.game.scene.player.moveRel(0,-1)">Left</button>
-            <button onclick="DEC.game.scene.player.moveRel(0,1)">Right</button>
-            <button onclick="DEC.game.scene.player.moveRel(1,0)">Up</button>
-            <button onclick="DEC.game.scene.player.moveRel(-1,0)">Down</button>
-        </div>
-        <div>Others:
-            <button onclick="DEC.game.scene.player.move(1,1)">Move</button>
-            <button onclick="DEC.game.scene.player.moveRel(1,1)">MoveRel</button>
+            <button onclick="SAMPLE.app.player.moveRel(-1,0)">Left</button>
+            <button onclick="SAMPLE.app.player.moveRel(1,0)">Right</button>
+            <button onclick="SAMPLE.app.player.moveRel(0,1)">Up</button>
+            <button onclick="SAMPLE.app.player.moveRel(0,-1)">Down</button>
         </div>
     </div>
-    <div id="controls-game" class="right2"><h2>Game</h2>
-        <button onclick="DEC.game.scene.turns.advance()">End Turn</button>
-    </div>
+</div>
+
+<div id="hidden-controls">
 </div>
 
 </body>

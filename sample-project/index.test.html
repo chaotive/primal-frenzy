@@ -7,27 +7,28 @@
     <link rel="stylesheet" type="text/css" href="src/resources/css/fullscreen.css">
 </head>
 
-<script src="lib/jquery-1.10.2.min.js"></script>
-<script src="lib/coffee-script.js"></script>
+<script src="lib/dev/coffee-script.js"></script>
+<script src="lib/main/jquery-1.10.2.min.js"></script>
 
 <script src="src/coffee/namespaces.coffee" type="text/coffeescript"></script>
 
-<script src="src/coffee/CHAOTIVE/UTIL/globalFunctions.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/CHAOTIVE/UTIL/generalFunctions.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/CHAOTIVE/UTIL/random.coffee" type="text/coffeescript"></script>
 <script src="src/coffee/CHAOTIVE/APP/fullscreen.coffee" type="text/coffeescript"></script>
 
-<script src="src/coffee/DEC/GAME/Move.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/SAMPLE/GAME/Player.coffee" type="text/coffeescript"></script>
 
 <script src="test/js/main.js"></script>
 <link rel="stylesheet" type="text/css" href="test/resources/css/mocha.css">
 
 <body onload="init()">
 
-<script src="test/resources/lib/chai.js"></script>
-<script src="test/resources/lib/mocha.js"></script>
+<script src="lib/test/chai.js"></script>
+<script src="lib/test/mocha.js"></script>
 <script>mocha.setup('bdd')</script>
 <div id="mocha"></div>
 
-<script src="test/coffee/DEC/GAME/move.coffee" type="text/coffeescript"></script>
+<script src="test/coffee/SAMPLE/GAME/Player.spec.coffee" type="text/coffeescript"></script>
 
 </body>
 </html>

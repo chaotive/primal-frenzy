@@ -1,12 +1,9 @@
-/**
- * Created by leo on 12-11-2015.
- */
 console.log("Starting APP...");
 
 function init(config) {
     try {
         console.log("Attempting start...");
-        CHAOTIVE.UTIL.loadWhenCSAvailable(game, config);
+        CHAOTIVE.UTIL.loadWhenCSAvailable(app, config);
         console.log("... application started! :)");
     } catch(err) {
         console.log("Still loading: " + err.message);
@@ -14,6 +11,6 @@ function init(config) {
     }
 }
 
-function game(config) {
-    DEC.game = new DEC.DemonsEdge(config);
+function app(config) {
+    SAMPLE.app = new SAMPLE.SampleProject(config);
 }
