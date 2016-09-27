@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/chaotive/demons-edge-client.git"
+    "url": "git+https://github.com/chaotive/chaotive-framework.git"
   },
   "author": "chaotive <leonardomontenegro123@gmail.com> (http://www.chaotive.cl)",
   "license": "ISC"
