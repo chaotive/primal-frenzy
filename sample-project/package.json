@@ -1,0 +1,24 @@
+{
+  "name": "sample-project",
+  "version": "0.0.1",
+  "description": "Part of Chaotive Framework.",
+  "main": "target/sample.js",
+  "devDependencies": {
+    "chai": "~1.7.2",
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-ftp-deploy": "^0.1.10",
+    "grunt-mocha-test": "~0.6.3"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/chaotive/demons-edge-client.git"
+  },
+  "author": "chaotive <leonardomontenegro123@gmail.com> (http://www.chaotive.cl)",
+  "license": "ISC"
+}

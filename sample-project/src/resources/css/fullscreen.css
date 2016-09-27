@@ -1,0 +1,47 @@
+div:-webkit-full-screen {
+    width: 100% !important;
+}
+div:-moz-full-screen {
+    width: 100% !important;
+}
+div:-ms-fullscreen {
+    width: 100% !important;
+}
+div:fullscreen {
+    width: 100% !important;
+}
+
+:-webkit-full-screen {
+    background-color: white;
+    z-index: 2147483647;
+    height: 100vh !important;
+}
+:-ms-full-screen {
+    background-color: white;
+    z-index: 2147483647;
+    height: 100vh !important;
+}
+:-moz-full-screen {
+    background-color: white;
+    z-index: 2147483647;
+    height: 100vh !important;
+}
+:full-screen {
+    background-color: white;
+    z-index: 2147483647;
+    height: 100vh !important;
+}
+
+/* While in fullscreen, hide any children with class 'tohide' */
+:-webkit-full-screen .tohide {
+    display: none;
+}
+:-moz-full-screen .tohide {
+    display: none;
+}
+:-ms-fullscreen .tohide {
+    display: none;
+}
+:fullscreen .tohide {
+    display: none;
+}

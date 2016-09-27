@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[DEV] Sample project</title>
+    <link rel="stylesheet" type="text/css" href="src/resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/resources/css/fullscreen.css">
+    <link rel="stylesheet" type="text/css" href="src/resources/css/helper.css">
+</head>
+
+<script src="lib/dev/coffee-script.js"></script>
+<script src="lib/main/jquery-1.10.2.min.js"></script>
+<script src="lib/main/pixi-3.0.11.js"></script>
+<script src="lib/main/babylon.2.4.js"></script>
+
+<script src="src/js/lib/RandomDungeonGenerator-2.js"></script>
+
+<script src="src/coffee/namespaces.coffee" type="text/coffeescript"></script>
+
+<script src="src/coffee/CHAOTIVE/UTIL/generalFunctions.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/CHAOTIVE/UTIL/Random.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/CHAOTIVE/APP/fullscreen.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/CHAOTIVE/PIXI/Sprite.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/CHAOTIVE/BABYLON/Shapes.coffee" type="text/coffeescript"></script>
+
+<script src="src/coffee/DEC/GAME/Turn.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/DEC/GAME/Move.coffee" type="text/coffeescript"></script>
+
+<script src="src/coffee/DEC/MAP/Room.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/DEC/MAP/Map.coffee" type="text/coffeescript"></script>
+
+<script src="src/coffee/DEC/CHARACTERS/Base.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/DEC/CHARACTERS/Player.coffee" type="text/coffeescript"></script>
+<script src="src/coffee/DEC/CHARACTERS/Enemy.coffee" type="text/coffeescript"></script>
+
+<script src="src/coffee/DEC/MENUS/Hud.coffee" type="text/coffeescript"></script>
+
+<script src="src/coffee/DEC/SCENES/Main.coffee" type="text/coffeescript"></script>
+
+<script src="src/coffee/DEC/DemonsEdge.coffee" type="text/coffeescript"></script>
+
+<script src="src/js/main.js"></script>
+
+<body onload="init('dev')">
+
+<div id="main">
+    <div id="game">
+        <canvas id="game-stage"></canvas>
+    </div>
+</div>
+
+<div id="controls"><h1>Controls</h1>
+    <div id="controls-camera"><h2>Camera</h2>
+        <div class="left3">
+            <div>Position: <span id="position-debug"></span></div>
+            <button onclick="DEC.game.scene.camera.position.x -= 1">-x</button>
+            <button onclick="DEC.game.scene.camera.position.x += 1">+x</button>
+            <button onclick="DEC.game.scene.camera.position.y -= 1">-y</button>
+            <button onclick="DEC.game.scene.camera.position.y += 1">+y</button>
+            <button onclick="DEC.game.scene.camera.position.z -= 1">-z</button>
+            <button onclick="DEC.game.scene.camera.position.z += 1">+z</button>
+        </div>
+        <div class="center3">
+            <div>Rotation: <span id="rotation-debug"></span></div>
+            <button onclick="DEC.game.scene.camera.rotation.x -= 0.1">-x</button>
+            <button onclick="DEC.game.scene.camera.rotation.x += 0.1">+x</button>
+            <button onclick="DEC.game.scene.camera.rotation.y -= 0.1">-y</button>
+            <button onclick="DEC.game.scene.camera.rotation.y += 0.1">+y</button>
+            <button onclick="DEC.game.scene.camera.rotation.z -= 0.1">-z</button>
+            <button onclick="DEC.game.scene.camera.rotation.z += 0.1">+z</button>
+        </div>
+        <div class="right3">
+            <div>Zoom: <span id="zoom-debug"></span></div>
+            <button onclick="DEC.game.scene.camera.updateZoom(-1)">-x</button>
+            <button onclick="DEC.game.scene.camera.updateZoom(1)">+x</button>
+        </div>
+    </div>
+    <div id="controls-player" class="left2"><h2>Player</h2>
+        <div>Move:
+            <button onclick="DEC.game.scene.player.moveRel(-1,0)">Left</button>
+            <button onclick="DEC.game.scene.player.moveRel(1,0)">Right</button>
+            <button onclick="DEC.game.scene.player.moveRel(0,1)">Up</button>
+            <button onclick="DEC.game.scene.player.moveRel(0,-1)">Down</button>
+        </div>
+        <div>Others:
+            <button onclick="DEC.game.scene.player.move(1,1)">Move</button>
+            <button onclick="DEC.game.scene.player.moveRel(1,1)">MoveRel</button>
+        </div>
+    </div>
+    <div id="controls-game" class="right2"><h2>Game</h2>
+        <button onclick="DEC.game.scene.turns.advance()">End Turn</button>
+    </div>
+</div>
+
+<div id="hidden-controls">
+</div>
+
+</body>
+</html>
