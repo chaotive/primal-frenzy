@@ -1,6 +1,6 @@
-# Sample Project #
+# Bootstrap Project #
 
-To be used as bootstrap for Chaotive Framework.
+To be used as bootstrap for Chaotive Framework projects.
 
 
 ## Usage ##

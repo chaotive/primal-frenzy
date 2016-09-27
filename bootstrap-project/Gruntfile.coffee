@@ -27,7 +27,7 @@ module.exports = (grunt) ->
           port: 21
           authKey: 'key1'
         src: 'target'
-        dest: '/httpdocs/desarrollo/sample-project'
+        dest: '/httpdocs/chaotive-framework/bootstrap-project'
         forceVerbose: true
     mochaTest:
       options:
