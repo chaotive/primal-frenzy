@@ -10,3 +10,4 @@ class SAMPLE.SampleProject
 
   start: () ->
     alert("Application started: " + @config.welcome.message)
+    @player = new SAMPLE.GAME.Player()
