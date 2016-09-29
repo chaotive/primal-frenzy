@@ -12,3 +12,5 @@ It has been developed with Web and Mobile applications and videogames developmen
 - Packaging: npm
 - Application bundle: PhoneGap / Cordova
 - Releasing: Grunt
+
+For instructions on how to begin using the framework go into bootstrap-project directory.
