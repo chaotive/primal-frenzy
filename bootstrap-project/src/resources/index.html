@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sample Project</title>
+    <title>Bootstrap sample Phaser project</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/fullscreen.css">
     <link rel="stylesheet" type="text/css" href="css/helper.css">
 </head>
 
 <script src="lib/jquery-1.10.2.min.js"></script>
-<script src="lib/pixi-3.0.11.js"></script>
-<script src="lib/babylon.2.4.js"></script>
+<script src="lib/phaser-2.0.1.min.js"></script>
 
 <script src="js/namespaces.js"></script>
 
@@ -22,16 +21,19 @@
 <body onload="init('main')">
 
 <div id="title">
-    <h1>Demon's Edge</h1>
+    <h1>Bootstrap sample Phaser project</h1>
 </div>
 
 <div id="main">
     <div id="game">
-        <canvas id="game-stage"></canvas>
     </div>
 </div>
 
-<div id="controls"><h1>Controls</h1>
+<div id="controls">
+</div>
+
+<div id="hidden-controls">
+    <h1>Controls</h1>
     <div id="controls-player" class="left2"><h2>Player</h2>
         <div>Move:
             <button onclick="SAMPLE.app.player.moveRel(-1,0)">Left</button>
@@ -40,9 +42,6 @@
             <button onclick="SAMPLE.app.player.moveRel(0,-1)">Down</button>
         </div>
     </div>
-</div>
-
-<div id="hidden-controls">
 </div>
 
 </body>

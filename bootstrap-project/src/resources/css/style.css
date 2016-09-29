@@ -3,9 +3,6 @@
     display: table-cell;
     vertical-align: middle;
     background:url(../img/chaotive.png);
-}
-
-#game-stage {
     width: 640px; /* 840px; */ /* 1 2 3 4 5 6 8 10 12 15 20 24 30 40 60 120 */
     height: 360px; /* 480px; */
 }

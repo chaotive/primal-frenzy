@@ -12,5 +12,5 @@ function init(config) {
 }
 
 function app(config) {
-    SAMPLE.app = new SAMPLE.SampleProject(config);
+    SAMPLE.app = new SAMPLE.PhaserGame(config);
 }

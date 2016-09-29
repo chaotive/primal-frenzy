@@ -10,3 +10,4 @@ top.CHAOTIVE =
 
 top.SAMPLE =
   GAME: {}
+  STATES: {}
