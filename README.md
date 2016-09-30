@@ -6,11 +6,11 @@ It has been developed with Web and Mobile applications and videogames developmen
 
 - Graphics engines: Pixi.js
 - Game engines: Phaser / Three.js / BabylonJS
-- Programming languages: CoffeeScript / TypeScript
+- Programming languages: CoffeeScript / Javascript
 - Unit test: Mocha & Chai
 - Project definition: Grunt
 - Packaging: npm
-- Application bundle: PhoneGap / Cordova
+- Application bundling: PhoneGap / Cordova
 - Releasing: Grunt
 
 For instructions on how to begin using the framework go into bootstrap-project directory.
