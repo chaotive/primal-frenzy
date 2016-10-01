@@ -3,7 +3,7 @@ console.log("Starting test suite...");
 function init() {
     try {
         console.log("Attempting start...");
-        CHAOTIVE.UTIL.loadWhenCSAvailable(testMocha);
+        CHAOTIVE.FW.UTIL.loadWhenCSAvailable(testMocha);
         console.log("... application started! :)");
     } catch(err) {
         console.log("Still loading: " + err.message);
