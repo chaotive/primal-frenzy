@@ -3,7 +3,7 @@ console.log("Starting APP...");
 function init(config) {
     try {
         console.log("Attempting start...");
-        CHAOTIVE.UTIL.loadWhenCSAvailable(app, config);
+        CHAOTIVE.FW.UTIL.loadWhenCSAvailable(app, config);
         console.log("... application started! :)");
     } catch(err) {
         console.log("Still loading: " + err.message);

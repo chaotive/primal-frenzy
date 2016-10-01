@@ -1,4 +1,4 @@
-class CHAOTIVE.UTIL.Random
+class CHAOTIVE.FW.UTIL.Random
 
   #https://gist.github.com/lukehedger/7322553
   @number: (max,min=0) ->
