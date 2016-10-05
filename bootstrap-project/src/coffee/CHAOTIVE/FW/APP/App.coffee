@@ -8,9 +8,9 @@ class CHAOTIVE.FW.APP.App
     @getJSON(@configUrl, (data) => @config = data; initCb())
 
   getJSON: (url, cb) ->
-    xhttp = new XMLHttpRequest();
+    xhttp = new XMLHttpRequest()
     xhttp.onreadystatechange = () ->
       if (@readyState == 4 and @status == 200) then cb(@responseText)
 
-    xhttp.open("GET", url, true);
-    xhttp.send();
+    xhttp.open("GET", url, true)
+    xhttp.send()

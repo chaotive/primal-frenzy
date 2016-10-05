@@ -13,13 +13,8 @@ module.exports = (grunt) ->
         options:
           join: true
         files:
-          'target/js/chaotive.js': ['src/coffee/CHAOTIVE/**/*.coffee','!src/coffee/CHAOTIVE/THREE/**']
+          'target/js/chaotive.fw.js': ['src/coffee/CHAOTIVE/FW/**/*.coffee']
           'target/js/sample.js': ['src/coffee/SAMPLE/**/*.coffee']
-      compileBare:
-        options:
-          bare: true
-        files:
-          'target/js/namespaces.js': ['src/coffee/namespaces.coffee']
     'ftp-deploy':
       build:
         auth:
@@ -38,7 +33,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-mocha-test'
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-ftp-deploy')
 
   grunt.registerTask 'default', ['coffee', 'mochaTest']
   grunt.registerTask 'build', ['clean', 'coffee', 'copy']
