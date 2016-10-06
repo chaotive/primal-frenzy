@@ -13,8 +13,8 @@ module.exports = (grunt) ->
         options:
           join: true
         files:
-          'target/js/chaotive.fw.js': ['src/coffee/CHAOTIVE/FW/**/*.coffee']
-          'target/js/sample.js': ['src/coffee/SAMPLE/**/*.coffee']
+          'target/js/chaotive.fw.js': ['src/coffee/CHAOTIVE/FW/boot.coffee', 'src/coffee/CHAOTIVE/FW/chaotive.fw.coffee', 'src/coffee/CHAOTIVE/FW/**/*.coffee']
+          'target/js/sample.js': ['src/coffee/SAMPLE/sample.coffee', 'src/coffee/SAMPLE/**/*.coffee']
     'ftp-deploy':
       build:
         auth:

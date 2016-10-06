@@ -1,7 +1,6 @@
 class SAMPLE.GAME.Util
 
   @preload: (game) ->
-    console.log(game)
     images =
       'chaotive': 'img/chaotive.png'
       'bg1': 'img/bg/bg_1.jpg'
