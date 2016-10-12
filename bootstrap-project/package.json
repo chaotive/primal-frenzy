@@ -1,8 +1,8 @@
 {
-  "name": "bootstrap-project",
-  "version": "0.0.1",
-  "description": "Chaotive framework bootstrap project",
-  "main": "target/sample.js",
+  "name": "chaotive-framework",
+  "version": "0.0.2",
+  "description": "Chaotive framework library development and bootstrap project",
+  "main": "target/js/chaotive.fw.js",
   "devDependencies": {
     "chai": "~1.7.2",
     "grunt": "~0.4.1",
