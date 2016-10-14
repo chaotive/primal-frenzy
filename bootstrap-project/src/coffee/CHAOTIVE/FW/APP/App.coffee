@@ -10,7 +10,7 @@ class CHAOTIVE.FW.APP.App
   getJSON: (url, cb) ->
     xhttp = new XMLHttpRequest()
     xhttp.onreadystatechange = () ->
-      if (@readyState == 4 and @status == 200) then cb(@responseText)
+      if (@readyState == 4 and @status == 200) then cb(JSON.parse(@responseText))
 
     xhttp.open("GET", url, true)
     xhttp.send()
