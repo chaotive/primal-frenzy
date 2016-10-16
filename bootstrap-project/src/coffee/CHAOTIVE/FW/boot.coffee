@@ -12,3 +12,5 @@ top.init = (config) ->
   catch err
     console.log("Still loading: " + err.message);
     setTimeout(init, 200, config);
+
+if top.chfw? then init(top.chfw.env) else init()
