@@ -7,6 +7,14 @@
     <link rel="stylesheet" type="text/css" href="src/resources/css/fullscreen.css">
 </head>
 
+<script>
+function start() {
+    window.expect = chai.expect;
+    window.should = chai.should();
+    var runner = mocha.run();
+}
+</script>
+
 <script src="lib/dev/coffee-script.js"></script>
 
 <script src="src/coffee/CHAOTIVE/FW/boot.coffee" type="text/coffeescript"></script>
@@ -20,8 +28,6 @@
 <script src="src/coffee/CHAOTIVE/FW/APP/App.coffee" type="text/coffeescript"></script>
 
 <script src="src/coffee/SAMPLE/GAME/Player.coffee" type="text/coffeescript"></script>
-
-<script src="test/js/main.js"></script>
 
 <body>
 
