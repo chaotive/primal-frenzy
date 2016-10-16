@@ -8,14 +8,17 @@
     <link rel="stylesheet" type="text/css" href="css/helper.css">
 </head>
 
-<script>var chfw = {env: "main"}</script>
+<script>
+    var chfw = {env: "main"};
+    function start(config) {
+        SAMPLE.app = new SAMPLE.PhaserGame(config);
+    }
+</script>
 
 <script src="lib/phaser-2.0.1.min.js"></script>
 
 <script src="js/chaotive.fw.js"></script>
 <script src="js/sample.js"></script>
-
-<script src="js/main.js"></script>
 
 <body>
 
