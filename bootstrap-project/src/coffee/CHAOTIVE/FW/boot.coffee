@@ -4,13 +4,13 @@ top.bundle = ({organization, namespaces}) ->
   top[organization] = {} if !top[organization]?
   top[organization][k] = v for k,v of namespaces
 
-top.init = (config) ->
+top.init = () ->
   try
     console.log("Attempting start...")
-    CHAOTIVE.FW.UTIL.loadWhenCSAvailable(start, config)
+    CHAOTIVE.FW.UTIL.loadWhenCSAvailable(start)
     console.log("... application started! :)")
   catch err
     console.log("Still loading: " + err.message);
-    setTimeout(init, 200, config);
+    setTimeout(init, 200);
 
-if top.chfw? then init(top.chfw.env) else init()
+init()

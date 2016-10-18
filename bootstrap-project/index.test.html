@@ -8,11 +8,12 @@
 </head>
 
 <script>
-function start() {
-    window.expect = chai.expect;
-    window.should = chai.should();
-    var runner = mocha.run();
-}
+    function start() {
+        console.log("Start");
+        window.expect = chai.expect;
+        window.should = chai.should();
+        var runner = mocha.run();
+    }
 </script>
 
 <script src="lib/dev/coffee-script.js"></script>
