@@ -8,11 +8,9 @@
     <link rel="stylesheet" type="text/css" href="src/resources/css/helper.css">
 </head>
 
-<script>
-    function start() {
-        SAMPLE.app = new SAMPLE.PhaserGame("dev");
-    }
-</script>
+<script>var settings = {
+    env: "dev"
+}</script>
 
 <script src="lib/dev/coffee-script.js"></script>
 <script src="lib/main/phaser-2.0.1.min.js"></script>
@@ -32,6 +30,8 @@
 <script src="src/coffee/SAMPLE/STATES/GameOver.coffee" type="text/coffeescript"></script>
 <script src="src/coffee/SAMPLE/STATES/Menu.coffee" type="text/coffeescript"></script>
 <script src="src/coffee/SAMPLE/PhaserGame.coffee" type="text/coffeescript"></script>
+
+<script src="src/coffee/SAMPLE/browserRun.coffee" type="text/coffeescript"></script>
 
 <body>
 

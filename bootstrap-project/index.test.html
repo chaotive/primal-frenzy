@@ -16,6 +16,11 @@
     }
 </script>
 
+<link rel="stylesheet" type="text/css" href="test/resources/css/mocha.css">
+<script src="lib/test/chai.js"></script>
+<script src="lib/test/mocha.js"></script>
+<script>mocha.setup('bdd')</script>
+
 <script src="lib/dev/coffee-script.js"></script>
 
 <script src="src/coffee/CHAOTIVE/FW/boot.coffee" type="text/coffeescript"></script>
@@ -30,15 +35,13 @@
 
 <script src="src/coffee/SAMPLE/GAME/Player.coffee" type="text/coffeescript"></script>
 
+<script src="test/coffee/SAMPLE/GAME/player.spec.coffee" type="text/coffeescript"></script>
+
+<script src="test/coffee/browserTest.coffee" type="text/coffeescript"></script>
+
 <body>
 
-<link rel="stylesheet" type="text/css" href="test/resources/css/mocha.css">
-<script src="lib/test/chai.js"></script>
-<script src="lib/test/mocha.js"></script>
-<script>mocha.setup('bdd')</script>
 <div id="mocha"></div>
-
-<script src="test/coffee/SAMPLE/GAME/player.spec.coffee" type="text/coffeescript"></script>
 
 </body>
 </html>

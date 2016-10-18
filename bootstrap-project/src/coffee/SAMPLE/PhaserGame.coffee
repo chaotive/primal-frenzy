@@ -1,6 +1,6 @@
 class SAMPLE.PhaserGame extends CHAOTIVE.FW.APP.App
 
-  constructor: (@configType) ->
+  constructor: (@configType = "main") ->
     console.log("Welcome to a Sample Phaser Game project: " + @configType)
     super(@configType, @start)
 
