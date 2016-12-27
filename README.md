@@ -1,12 +1,12 @@
 # Chaotive Framework #
 
-A browser and node.js based software development projects framework.
+A multi-language browser and node.js based project development framework, for Javascript libraries and applications.
 
 It has been developed with Web and Mobile applications and videogames development in mind, considering the following technologies in different software development aspects:
 
 - Graphics engines: Pixi.js
 - Game engines: Phaser / Three.js / BabylonJS
-- Programming languages: CoffeeScript / Javascript
+- Programming languages: CoffeeScript / TypeScript / Javascript
 - Unit test: Mocha & Chai
 - Project definition: Grunt
 - Packaging: npm
