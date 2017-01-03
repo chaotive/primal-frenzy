@@ -29,13 +29,22 @@ module.exports = (grunt) ->
       options:
         reporter: 'spec'
       src: ['src/test/coffee/test.coffee']
+    typescript:
+      'sample-ts':
+        #'target/js/sample.ts.js': ['src/main/ts/SAMPLE/TS/**/*.ts']
+        src: ['src/main/ts/SAMPLE/TS/**/*.ts'],
+        dest: 'target/js/sample.ts.js',
+        options:
+          module: 'amd' #or commonjs
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-mocha-test'
-  grunt.loadNpmTasks('grunt-contrib-copy')
-  grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-ftp-deploy')
+  grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-ftp-deploy'
+  grunt.loadNpmTasks 'grunt-typescript'
 
-  grunt.registerTask 'default', ['coffee', 'mochaTest']
-  grunt.registerTask 'build', ['clean', 'coffee', 'copy']
+  grunt.registerTask 'default', ['compile', 'mochaTest']
+  grunt.registerTask 'compile', ['coffee', 'typescript']
+  grunt.registerTask 'build', ['clean', 'compile', 'copy']
   grunt.registerTask 'release', ['build', 'ftp-deploy']

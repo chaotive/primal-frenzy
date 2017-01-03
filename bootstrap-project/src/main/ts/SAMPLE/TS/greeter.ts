@@ -18,6 +18,17 @@ function greeter(person : Person) {
     return "Hello, " + person.firstName + " " + person.lastName;
 }
 
-var user = new Student("Jane", "M.", "User");
+function tryToGreet(): any {
+    try {
+        let user = new Student("Typescript", "Is.", "Working");
+        let newcontent = document.createElement('div');
+        newcontent.innerHTML = greeter(user);
 
-document.body.innerHTML = greeter(user);
+        document.body.appendChild(newcontent);
+    } catch (e) {
+        console.log(e);
+        setTimeout(tryToGreet, 100)
+    }
+}
+
+window.onload = tryToGreet();
