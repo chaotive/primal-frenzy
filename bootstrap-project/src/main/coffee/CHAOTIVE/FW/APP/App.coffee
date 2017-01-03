@@ -2,7 +2,7 @@ class CHAOTIVE.FW.APP.App
 
   constructor: (@configType, initCb = @start) ->
     @urlPrefix = switch @configType
-      when 'dev' then "../src/resources/"
+      when 'dev' then "../../main/resources/"
       else ""
     @configUrl = @urlPrefix + "config/" + @configType + ".json"
     @getJSON(@configUrl, (data) => @config = data; initCb())
