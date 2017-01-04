@@ -1,16 +1,31 @@
-# Chaotive Framework #
+# Bootstrap Project #
 
-A multi-language browser and node.js based project development framework, for Javascript libraries and applications.
+Chaotive Framework library development project and also sample to be used as bootstrap for Chaotive Framework projects.
 
-It has been developed with Web and Mobile applications and videogames development in mind, considering the following technologies in different software development aspects:
+## Usage from browser ##
 
-- Graphics engines: Pixi.js
-- Game engines: Phaser / Three.js / BabylonJS
-- Programming languages: CoffeeScript / TypeScript / Javascript
-- Unit test: Mocha & Chai
-- Project definition: Grunt
-- Packaging: npm
-- Application bundling: PhoneGap / Cordova
-- Releasing: Grunt
+Just use index.dev.html and index.test.html files. You may want to serve these files from behind a web-server to avoid potential web security issues.
 
-For instructions on how to begin using the framework go into bootstrap-project directory.
+## Usage from node.js ##
+
+Make sure you have node.js installed and npm command is working. 
+
+Make sure grunt-cli is installed or else install it using:
+
+    npm install -g grunt-cli
+
+Change to the project's root directory.
+
+Install project dependencies with:
+
+    npm install
+
+Run Grunt with grunt.
+
+Additional references:
+
+- http://gruntjs.com/getting-started
+
+
+## To-do ##
+

@@ -1,6 +1,0 @@
-node_modules/
-target/
-*.swp
-.idea/
-bootstrap-project.iml
-grunt
