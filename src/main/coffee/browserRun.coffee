@@ -1,2 +1,2 @@
 window.start = () ->
-  window.app = new SAMPLE.PhaserGame(chfwSettings.env)
+  window.app = new LeoGame(chfwSettings.env)
