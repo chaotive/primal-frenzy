@@ -4,10 +4,6 @@
 
 export class Menu extends Phaser.State {
 
-    constructor() {
-        // this.game = game;
-        console.log("menu");
-    }
     // constructor: (@game) ->
 
 //     preload: () -> SAMPLE.GAME.Util.preload(@game)

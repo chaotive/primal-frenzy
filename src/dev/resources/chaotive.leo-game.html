@@ -13,8 +13,41 @@
 
     <script src="../../../lib/dev/coffee-script.js"></script>
 
+    <script src="../../../lib/dev/system-0.19.41.js"></script>
+    <!--<script src="../../../lib/dev/ts/plugin-typescript-5.3.3.js"></script>-->
+    <script>
+        System.config({
+            packages: {
+                "ts": {
+                    "main": "plugin-typescript-5.3.3.js"
+                },
+                "typescript": {
+                    "main": "typescript-2.1.4.js",
+                    "meta": {
+                        "typescript-2.1.4.js": {
+                            "exports": "ts"
+                        }
+                    }
+                },
+                "leo-game": {
+                    "defaultExtension": "ts",
+                    "main": "CHAOTIVE/LEO-GAME/LeoGame.ts"
+                }
+            },
+            map: {
+                "ts": "../../../lib/dev/ts",
+                "typescript": "../../../lib/dev/ts",
+                "leo-game": '../../main/ts'
+            },
+            transpiler: "ts"
+        });
+
+        //SystemJS.import('CHAOTIVE/LEO-GAME/LeoGame.ts');
+    </script>
+
     <script src="../../../lib/main/phaser-2.0.1.min.js"></script>
     <script src="../../../lib/main/chaotive.fw-0.5.0.js"></script>
+
 
     <!--<script src="../../main/coffee/SAMPLE/GAME/Util.coffee" type="text/coffeescript"></script>-->
     <!--<script src="../../main/coffee/SAMPLE/GAME/Player.coffee" type="text/coffeescript"></script>-->
@@ -22,7 +55,7 @@
     <!--<script src="../../main/coffee/SAMPLE/STATES/Menu.coffee" type="text/coffeescript"></script>-->
     <!--<script src="../../main/coffee/SAMPLE/PhaserGame.coffee" type="text/typescript"></script>-->
     <!--<script type="text/typescript" src="../../main/ts/CHAOTIVE/LEO-GAME/STATES/Menu.ts"></script>-->
-    <script type="text/typescript" src="../../main/ts/CHAOTIVE/LEO-GAME/LeoGame.ts"></script>
+    <!--<script type="text/typescript" src="../../main/ts/CHAOTIVE/LEO-GAME/LeoGame.ts"></script>-->
 
     <!--<script>-->
         <!--window.start = function() {-->
@@ -46,6 +79,3 @@
 
 </body>
 </html>
-
-<script src="../../../lib/dev/ts/typescriptServices.js"></script>
-<script src="../../../lib/dev/ts/transpiler.js"></script>

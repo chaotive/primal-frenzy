@@ -30,12 +30,20 @@ module.exports = (grunt) ->
         reporter: 'spec'
       src: ['src/test/coffee/test.coffee']
     typescript:
-      'sample-ts':
+      'sample_ts':
         #'target/js/sample.ts.js': ['src/main/ts/SAMPLE/TS/**/*.ts']
-        src: ['src/main/ts/SAMPLE/TS/**/*.ts'],
-        dest: 'target/js/sample.ts.js',
+        src: ['src/main/ts/SAMPLE/TS/**/*.ts']
+        dest: 'target/js/sample.ts.js'
         options:
           module: 'amd' #or commonjs
+      'chaotive_leo-game':
+        src: ['src/main/ts/CHAOTIVE/LEO-GAME/**/*.ts']
+        dest: 'target/js/chaotive.js'
+        options:
+          module: 'amd'
+          references: [
+            "lib/main/**/*.d.ts"
+          ]
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-mocha-test'

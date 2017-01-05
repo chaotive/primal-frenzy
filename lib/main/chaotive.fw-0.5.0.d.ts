@@ -7,7 +7,7 @@ declare namespace CHAOTIVE {
         namespace APP {
             class App {
                 configType: string;
-                constructor
+                constructor(configType, initCb)
             }
         }
     }
