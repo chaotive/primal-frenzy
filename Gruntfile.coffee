@@ -1,6 +1,8 @@
 module.exports = (grunt) ->
   grunt.initConfig
-    clean: ['target']
+    clean:
+      build: ['target']
+      temp: ['target/temp']
     copy:
       main:
         files: [
@@ -12,10 +14,7 @@ module.exports = (grunt) ->
       compile:
         options:
           join: true
-        files:
-          'target/js/browserRun.js': ['src/main/coffee/browserRun.coffee']
-          'target/js/chaotive.fw.js': ['src/main/coffee/CHAOTIVE/FW/boot.coffee', 'src/main/coffee/CHAOTIVE/FW/chaotive.fw.coffee', 'src/main/coffee/CHAOTIVE/FW/**/*.coffee']
-          'target/js/sample.js': ['src/main/coffee/SAMPLE/sample.coffee', 'src/main/coffee/SAMPLE/**/*.coffee']
+        files: {}
     'ftp-deploy':
       build:
         auth:
@@ -30,20 +29,21 @@ module.exports = (grunt) ->
         reporter: 'spec'
       src: ['src/test/coffee/test.coffee']
     typescript:
-      'sample_ts':
-        #'target/js/sample.ts.js': ['src/main/ts/SAMPLE/TS/**/*.ts']
-        src: ['src/main/ts/SAMPLE/TS/**/*.ts']
-        dest: 'target/js/sample.ts.js'
-        options:
-          module: 'amd' #or commonjs
       'chaotive_leo-game':
         src: ['src/main/ts/CHAOTIVE/LEO-GAME/**/*.ts']
-        dest: 'target/js/chaotive.js'
+        dest: 'target/temp/js/chaotive.leo-game'
         options:
-          module: 'amd'
+          module: 'commonjs'
           references: [
             "lib/main/**/*.d.ts"
           ]
+    browserify:
+      'chaotive_leo-game':
+        files:
+          'target/js/chaotive.leo-game.js': ['target/temp/js/chaotive.leo-game/LeoApp.js']
+        options:
+          browserifyOptions:
+            standalone: "CHAOTIVE.LEOGAME"
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-mocha-test'
@@ -51,8 +51,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-ftp-deploy'
   grunt.loadNpmTasks 'grunt-typescript'
+  grunt.loadNpmTasks 'grunt-browserify'
 
   grunt.registerTask 'default', ['compile', 'mochaTest']
-  grunt.registerTask 'compile', ['coffee', 'typescript']
+  grunt.registerTask 'compile', ['coffee', 'typescript', 'browserify', 'clean:temp']
   grunt.registerTask 'build', ['clean', 'compile', 'copy']
   grunt.registerTask 'release', ['build', 'ftp-deploy']
