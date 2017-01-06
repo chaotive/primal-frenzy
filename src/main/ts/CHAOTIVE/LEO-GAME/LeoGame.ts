@@ -1,20 +1,17 @@
 import {Menu} from "./STATES/Menu"
+import {GameOver} from "./STATES/GameOver";
 
-export class LeoGame extends CHAOTIVE.FW.APP.App {
-    game: Phaser.Game;
+export class LeoGame extends Phaser.Game {
+    app: CHAOTIVE.FW.APP.App;
 
-    constructor(configType = "main") {
-        console.log("Welcome to a Sample Phaser Game project: " + configType);
-        super(configType, () => this.start())
-    }
+    constructor(app) {
+        super(640, 360, Phaser.AUTO, "game");
 
-    start() {
-        this.game = new Phaser.Game(640, 360, Phaser.AUTO, "game");
+        console.log("LeoGame started...");
+        this.app = app;
 
-        console.log(Menu);
-        // this.game.state.add('menu', Menu, false);
-        // this.game.state.add('gameover', SAMPLE.STATES.GameOver, false);
-        // this.game.state.start('menu');
-        console.log("started...");
+        this.state.add('Menu', Menu, false);
+        this.state.add('GameOver', GameOver, false);
+        this.state.start('Menu');
     }
 }

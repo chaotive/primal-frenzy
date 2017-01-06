@@ -1,22 +1,22 @@
-/**
- * Created by leo on 05-01-2017.
- */
+import {Util} from "../GAME/Util";
 
 export class Menu extends Phaser.State {
+    startButton: Phaser.Sprite;
 
-    // constructor: (@game) ->
+    preload() {
+        Util.preload(this.game);
+    }
 
-//     preload: () -> SAMPLE.GAME.Util.preload(@game)
-//
-//     create: () ->
-// @game.add.sprite(0, 0, 'bg1')
-// @startButton = @game.add.sprite(230, 90, 'startbutton')
-// @startButton.inputEnabled = true
-//     @startButton.events.onInputDown.add(@startAction,@)
-//
-//     startAction: () ->
-// # action binded to startButton
-// @game.state.start('gameover')
+    create() {
+        this.game.add.sprite(0, 0, 'bg1');
+        this.startButton = this.game.add.sprite(230, 90, 'startbutton');
+        this.startButton.inputEnabled = true;
+        this.startButton.events.onInputDown.add(this.startAction,this);
+    }
+
+    startAction() { // action binded to startButton
+        this.game.state.start('GameOver');
+    }
 
 }
 
