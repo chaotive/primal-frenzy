@@ -31,18 +31,26 @@
                 },
                 "leo-game": {
                     "defaultExtension": "ts",
-                    "main": "CHAOTIVE/LEO-GAME/LeoGame.ts"
+                    "main": "LeoGame.ts",
+                    "meta": {
+                        "*.ts": {
+                            "loader": "ts"
+                        }
+                    }
                 }
             },
             map: {
                 "ts": "../../../lib/dev/ts",
                 "typescript": "../../../lib/dev/ts",
-                "leo-game": '../../main/ts'
+                "leo-game": '../../main/ts/CHAOTIVE/LEO-GAME'
             },
             transpiler: "ts"
         });
 
-        //SystemJS.import('CHAOTIVE/LEO-GAME/LeoGame.ts');
+        System.import('leo-game').then( function(lg) {
+           console.log(lg);
+           window.app = new lg.LeoGame(chfwSettings.env)
+        });
     </script>
 
     <script src="../../../lib/main/phaser-2.0.1.min.js"></script>
