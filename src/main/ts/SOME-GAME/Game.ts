@@ -1,7 +1,7 @@
 import {Menu} from "./STATES/Menu"
 import {GameOver} from "./STATES/GameOver";
 
-export class LeoGame extends Phaser.Game {
+export class Game extends Phaser.Game {
     app: CHAOTIVE.FW.APP.App;
 
     constructor(app) {

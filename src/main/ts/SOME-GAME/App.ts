@@ -1,7 +1,7 @@
-import {LeoGame} from "./LeoGame";
+import {Game} from "./Game";
 
-export class LeoApp extends CHAOTIVE.FW.APP.App {
-    game: LeoGame;
+export class App extends CHAOTIVE.FW.APP.App {
+    game: Game;
 
     constructor(configType = "main") {
         super(configType, () => this.start());
@@ -9,6 +9,6 @@ export class LeoApp extends CHAOTIVE.FW.APP.App {
     }
 
     start() {
-        this.game = new LeoGame(this);
+        this.game = new Game(this);
     }
 }

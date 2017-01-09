@@ -22,28 +22,28 @@ module.exports = (grunt) ->
           port: 21
           authKey: 'key1'
         src: 'target'
-        dest: '/httpdocs/chaotive-framework/bootstrap-project'
+        dest: '/httpdocs/desarrollo/some-game'
         forceVerbose: true
     mochaTest:
       options:
         reporter: 'spec'
       src: ['src/test/coffee/test.coffee']
     typescript:
-      'chaotive_leo-game':
-        src: ['src/main/ts/CHAOTIVE/LEO-GAME/**/*.ts']
-        dest: 'target/temp/js/chaotive.leo-game'
+      'some-game':
+        src: ['src/main/ts/SOME-GAME/**/*.ts']
+        dest: 'target/temp/js/some-game'
         options:
           module: 'commonjs'
           references: [
             "lib/main/**/*.d.ts"
           ]
     browserify:
-      'chaotive_leo-game':
+      'some-game':
         files:
-          'target/js/chaotive.leo-game.js': ['target/temp/js/chaotive.leo-game/LeoApp.js']
+          'target/js/some-game.js': ['target/temp/js/some-game/App.js']
         options:
           browserifyOptions:
-            standalone: "CHAOTIVE.LEOGAME"
+            standalone: "SOMEGAME"
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-mocha-test'

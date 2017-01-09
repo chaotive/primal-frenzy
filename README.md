@@ -1,10 +1,17 @@
-# Bootstrap Project #
+# some-game Bootstrap Project #
 
-Chaotive Framework library development project and also sample to be used as bootstrap for Chaotive Framework projects.
+Sample project to develop some game. It uses the following technologies:
+- HTML5
+- Phaser
+- Typescript (in browser transpilation using SystemJS)
+- Chaotive Framework
+
+You can see a working example of the current project build on:
+http://www.chaotive.cl/desarrollo/some-game
 
 ## Usage from browser ##
 
-Just use index.dev.html and index.test.html files. You may want to serve these files from behind a web-server to avoid potential web security issues.
+Just use src/dev/resources/some-game.html file. You may want to serve these files from behind a web-server to avoid potential web security issues.
 
 ## Usage from node.js ##
 
@@ -26,6 +33,4 @@ Additional references:
 
 - http://gruntjs.com/getting-started
 
-
-## To-do ##
 

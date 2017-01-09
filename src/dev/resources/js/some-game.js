@@ -11,9 +11,9 @@ System.config({
                 }
             }
         },
-        "leo-game": {
+        "some-game": {
             "defaultExtension": "ts",
-            "main": "LeoApp.ts",
+            "main": "App.ts",
             "meta": {
                 "*.ts": {
                     "loader": "ts"
@@ -24,14 +24,13 @@ System.config({
     map: {
         "ts": "../../../lib/dev/ts",
         "typescript": "../../../lib/dev/ts",
-        "leo-game": '../../main/ts/CHAOTIVE/LEO-GAME'
+        "some-game": '../../main/ts/SOME-GAME'
     },
     transpiler: "ts"
 });
 
 window.start = function() {
-    console.log("Chaotive framework initialized...");
-    System.import('leo-game').then( function(lg) {
-        window.app = new lg.LeoApp("dev");
+    System.import('some-game').then( function(sg) {
+        window.app = new sg.App("dev");
     });
 };
