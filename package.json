@@ -1,8 +1,8 @@
 {
   "name": "leo-game",
   "version": "0.0.0",
-  "description": "Leo's game",
-  "main": "target/js/chaotive.leo-game.js",
+  "description": "Some game",
+  "main": "target/js/some-game.js",
   "devDependencies": {
     "chai": "~1.7.2",
     "grunt": "~0.4.1",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/chaotive/leo-game.git"
+    "url": "git+https://github.com/chaotive/some-game.git"
   },
   "author": "chaotive <leonardomontenegro123@gmail.com> (http://www.chaotive.cl)",
   "license": "ISC"
