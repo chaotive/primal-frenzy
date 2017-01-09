@@ -1,7 +1,7 @@
 {
-  "name": "leo-game",
+  "name": "some-game",
   "version": "0.0.0",
-  "description": "Some game",
+  "description": "Some game to be developed.",
   "main": "target/js/some-game.js",
   "devDependencies": {
     "chai": "~1.7.2",
