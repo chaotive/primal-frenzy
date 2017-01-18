@@ -44,6 +44,9 @@ module.exports = (grunt) ->
         options:
           browserifyOptions:
             standalone: "SOMEGAME"
+    serve:
+      options:
+        port: 8080
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-mocha-test'
@@ -52,6 +55,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-ftp-deploy'
   grunt.loadNpmTasks 'grunt-typescript'
   grunt.loadNpmTasks 'grunt-browserify'
+  grunt.loadNpmTasks 'grunt-serve'
 
   grunt.registerTask 'default', ['compile', 'mochaTest']
   grunt.registerTask 'compile', ['coffee', 'typescript', 'browserify', 'clean:temp']

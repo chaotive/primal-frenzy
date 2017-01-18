@@ -21,21 +21,25 @@ Just use src/dev/resources/some-game.html file. You may want to serve these file
 
 ## Usage from node.js ##
 
-Make sure you have node.js installed and npm command is working. 
+1. Make sure you have node.js installed and npm command is working. 
+2. Make sure grunt-cli is installed or else install it using:
 
-Make sure grunt-cli is installed or else install it using:
 
     npm install -g grunt-cli
 
-Change to the project's root directory.
+3. Change to the project's root directory.
+4. Install project dependencies with:
 
-Install project dependencies with:
 
     npm install
 
-Run Grunt with grunt.
+5. Start Web serving the project to access it using
 
-Additional references:
+
+    grunt serve
+        
+6. You are now set, you should be able to run the game on your browser by going to http://YOUR.LOCAL.IP:8080/src/dev/resources/some-game.html
+7. Other grunt tasks, such as compile, build or release, please refer to Gruntfile.coffee definitions and the following page for Grunt usage support:
 
 - http://gruntjs.com/getting-started
 

@@ -12,6 +12,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-ftp-deploy": "^0.1.10",
     "grunt-mocha-test": "~0.6.3",
+    "grunt-serve": "^0.1.6",
     "grunt-typescript": "^0.8.0"
   },
   "scripts": {

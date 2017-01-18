@@ -5,7 +5,8 @@ export class App extends CHAOTIVE.FW.APP.App {
 
     constructor(configType = "main") {
         super(configType, () => this.start());
-        console.log("LeoApp started: " + configType);
+
+        console.log("App started: " + configType);
     }
 
     start() {
