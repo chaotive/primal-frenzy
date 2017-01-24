@@ -1,7 +1,8 @@
 should = require('chai').should()
 
-require '../../main/coffee/CHAOTIVE/FW/boot'
-require '../../main/coffee/SAMPLE/sample'
-require '../../main/coffee/SAMPLE/GAME/Player'
+global.Phaser = require('phaser-mock')
+require '../../../target/lib/chaotive.fw-0.5.0'
 
-require './SAMPLE/GAME/player.spec'
+global.SOMEGAME = require '../../../target/js/some-game'
+
+require './SOME-GAME/some.spec.coffee'

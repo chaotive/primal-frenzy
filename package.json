@@ -13,7 +13,10 @@
     "grunt-ftp-deploy": "^0.1.10",
     "grunt-mocha-test": "~0.6.3",
     "grunt-serve": "^0.1.6",
-    "grunt-typescript": "^0.8.0"
+    "grunt-typescript": "^0.8.0",
+    "jsdom": "9.9.1",
+    "jsdom-global": "2.1.1",
+    "phaser-mock": "^1.1.5"
   },
   "scripts": {
     "test": "grunt"

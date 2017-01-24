@@ -57,7 +57,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-browserify'
   grunt.loadNpmTasks 'grunt-serve'
 
-  grunt.registerTask 'default', ['compile', 'mochaTest']
+  grunt.registerTask 'default', ['compile', 'copy', 'mochaTest']
   grunt.registerTask 'compile', ['coffee', 'typescript', 'browserify', 'clean:temp']
   grunt.registerTask 'build', ['clean', 'compile', 'copy']
   grunt.registerTask 'release', ['build', 'ftp-deploy']

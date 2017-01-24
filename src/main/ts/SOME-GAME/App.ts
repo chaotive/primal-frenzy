@@ -12,4 +12,8 @@ export class App extends CHAOTIVE.FW.APP.App {
     start() {
         this.game = new Game(this);
     }
+
+    static sampleFunction(a: number) {
+        return a + 1;
+    }
 }
