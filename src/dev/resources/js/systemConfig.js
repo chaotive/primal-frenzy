@@ -11,7 +11,7 @@ System.config({
                 }
             }
         },
-        "some-game": {
+        "SG": {
             "defaultExtension": "ts",
             "main": "App.ts",
             "meta": {
@@ -24,13 +24,7 @@ System.config({
     map: {
         "ts": "../../../lib/dev/ts",
         "typescript": "../../../lib/dev/ts",
-        "some-game": '../../main/ts/SOME-GAME'
+        "SG": '../../main/ts/SG'
     },
     transpiler: "ts"
 });
-
-window.start = function() {
-    System.import('some-game').then( function(sg) {
-        window.app = new sg.App("dev");
-    });
-};

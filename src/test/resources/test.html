@@ -9,22 +9,26 @@
 
     <script src="../../../lib/main/phaser-2.6.2.min.js"></script>
     <script src="../../../lib/main/chaotive.fw-0.5.0.js"></script>
-    <script src="../../../lib/dev/system-0.19.41.js"></script>
 
-    <script src="js/systemConfig.js"></script>
-    <script src="js/devMain.js"></script>
+    <script src="../../../lib/dev/system-0.19.41.js"></script>
+    <script src="../../dev/resources/js/systemConfig.js"></script>
+
+    <script src="../../../lib/dev/coffee-script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../test/resources/css/mocha.css">
+    <script src="../../../lib/test/chai.js"></script>
+    <script src="../../../lib/test/mocha.js"></script>
+
+    <script src="js/testPrepare.coffee" type="text/coffeescript"></script>
+
+    <script src="../coffee/SG/some.spec.coffee" type="text/coffeescript"></script>
+
+    <script src="js/testMain.coffee" type="text/coffeescript"></script>
+
 
 </head>
 <body>
 
-<div id="title">
-    <h1>[DEV] Browser runner</h1>
-</div>
-
-<div id="main">
-    <div id="game">
-    </div>
-</div>
+<div id="mocha"></div>
 
 </body>
 </html>

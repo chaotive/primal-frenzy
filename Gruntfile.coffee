@@ -30,7 +30,7 @@ module.exports = (grunt) ->
       src: ['src/test/coffee/test.coffee']
     typescript:
       'some-game':
-        src: ['src/main/ts/SOME-GAME/**/*.ts']
+        src: ['src/main/ts/SG/**/*.ts']
         dest: 'target/temp/js/some-game'
         options:
           module: 'commonjs'
@@ -43,7 +43,7 @@ module.exports = (grunt) ->
           'target/js/some-game.js': ['target/temp/js/some-game/App.js']
         options:
           browserifyOptions:
-            standalone: "SOMEGAME"
+            standalone: "SG"
     serve:
       options:
         port: 8080
